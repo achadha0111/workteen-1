@@ -330,6 +330,22 @@ h2 {
     margin-top:-25px;
 
 }
+
+.splash-card-title{
+    padding-top:20px;
+    text-align: center;
+    margin:10px;
+    margin-bottom:-2%;
+    font-family: 'Karla';
+    font-size:38px
+}
+.splash-card-subtitle{
+    text-align: center;
+    font-family: 'Karla';
+    font-size:25px;
+    margin-bottom:-4%;
+}
+
 .mdl-card {
     width: 100%;
 }
@@ -340,19 +356,19 @@ h2 {
     margin-top: 10px;
     
     color:white;
-    width: 100%;
+    width: 45%;
 }
 .g-button{
     margin-top: 10px;
    
     color: white;
-    width: 100%;
+    width: 45%;
 
 }
 .login-button{
     
     
-    color: white;
-    width: 100%;
-
+    color:red;
+    width: 60%;
+    background:transparent;
 }
