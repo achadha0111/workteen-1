@@ -15,14 +15,14 @@ var opportunityDescription = document.getElementById('new-opportunity-descriptio
 
 //Miscellaneous elements
 var splashPage = document.getElementById('splash-page');
-var signInButton = document.getElementById('sign-in-button');
+var signInButton = document.getElementById('google-sign-in-button');
 var addOpportunity = document.getElementById('add-opportunity');
 var addButton = document.getElementById('add');
 var publicPostsSection = document.getElementById('public-posts-list');
 var myPostsSection = document.getElementById('my-posts-list');
 var myFeedMenuButton = document.getElementById('my-feed');
 var publicFeedMenuButton = document.getElementById('public-feed');
-
+var signOutButton = document.getElementById('sign-out');
 /**
 Pushing opportunity to database/
 */
@@ -120,7 +120,13 @@ window.addEventListener('load', function() {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
   });
-
+  signOutButton.addEventListener('click', function(){
+    firebase.auth().signOut().then(function() {
+      console.log('Signed Out');
+    }, function(error) {
+        console.error('Sign Out Error', error);
+      });
+  });
   // Listen for auth state changes
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
