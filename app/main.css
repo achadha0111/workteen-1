@@ -59,11 +59,27 @@ h3 {
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
     color: #0288D1;
 }
-
+.mdl-layout-title{
+    margin-left:-120px;
+}
+.nav-icon{
+    margin:7px;
+    color: white;
+}
+.nav-spl{   
+    color:white;
+}
+.search-icon{
+    margin-top:3px;
+    padding:1px;
+    font-size:27px;
+}
 /* Header */
 
 .logo {
-    font-family: 'Amaranth', sans-serif;
+    font-family: 'Karla', sans-serif;
+    margin-left:-90px;
+    padding:0px;
 }
 .logo .material-icons {
     top: 4px;
@@ -343,7 +359,7 @@ h2 {
     text-align: center;
     font-family: 'Karla';
     font-size:25px;
-    margin-bottom:-4%;
+    margin-bottom:-6%;
 }
 
 .mdl-card {

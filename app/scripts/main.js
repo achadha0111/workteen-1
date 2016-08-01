@@ -15,7 +15,8 @@ var opportunityDescription = document.getElementById('new-opportunity-descriptio
 
 //Miscellaneous elements
 var splashPage = document.getElementById('splash-page');
-var signInButton = document.getElementById('google-sign-in-button');
+var googleSignInButton = document.getElementById('google-sign-in-button');
+var epSignInButton = document.getElementById('ep-sign-in-button');
 var addOpportunity = document.getElementById('add-opportunity');
 var addButton = document.getElementById('add');
 var publicPostsSection = document.getElementById('public-posts-list');
@@ -23,6 +24,8 @@ var myPostsSection = document.getElementById('my-posts-list');
 var myFeedMenuButton = document.getElementById('my-feed');
 var publicFeedMenuButton = document.getElementById('public-feed');
 var signOutButton = document.getElementById('sign-out');
+var email = document.getElementById('email');
+var password = document.getElementById('userpass');
 /**
 Pushing opportunity to database/
 */
@@ -115,27 +118,79 @@ function writeUserData(userId, name, email) {
   console.log("I am working")
 }
 window.addEventListener('load', function() {
-  // Bind Sign in button.
-  signInButton.addEventListener('click', function() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
+  // Bind Email and Password Sign in button.
+  
+  epSignInButton.addEventListener('click', function() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('userpass').value;
+    if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+    }
+    if (password.length < 4) {
+      alert('Please enter a password.');
+      return;
+    }
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+          // [START_EXCLUDE]
+      if (errorCode === 'auth/wrong-password') {
+        alert('Wrong password.');
+      } else {
+        console.error(error);
+      }
+          // [END_EXCLUDE]
+      });
+    // var provider = new firebase.auth.GoogleAuthProvider();
+    // firebase.auth().signInWithPopup(provider);
   });
+
+  googleSignInButton.addEventListener('click', function(){
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider); 
+  });
+
+  var user = firebase.auth().currentUser;
+ 
+  
+  
+  // Bind sign out button
   signOutButton.addEventListener('click', function(){
     firebase.auth().signOut().then(function() {
       console.log('Signed Out');
+      email.value = '';
+      password.value = '';
     }, function(error) {
         console.error('Sign Out Error', error);
       });
   });
+
   // Listen for auth state changes
   firebase.auth().onAuthStateChanged(function(user) {
+    
     if (user) {
-      splashPage.style.display = 'none';
-      writeUserData(user.uid, user.displayName, user.email);
-      startDatabaseQueries();
+      var providerName = user.providerData[0].providerId;
+      console.log(providerName);
+      if (providerName === "google.com") {
+        console.log('I come from Google');
+        addButton.style.display = 'none';
+        splashPage.style.display = 'none';
+        // addButton.style.display = 'none';
+        writeUserData(user.uid, user.displayName, user.email);
+        startDatabaseQueries();
+      } 
+      else if(providerName === "password") {
+        console.log('I come from Password');
+        splashPage.style.display = 'none';
+        writeUserData(user.uid, user.displayName, user.email);
+        startDatabaseQueries(); 
+      } 
     } else {
-      splashPage.style.display = 'block';
-    }
+        splashPage.style.display = 'block';
+      }
+
   });
 
   // Saves message on form submit.

@@ -8,13 +8,13 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.red-deep_orange.min.css" />
   	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
   	<link rel="stylesheet" href="main.css">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">	
+
 	<!-- Home Page -->
 	<!--
 	<section id="splash-page">
@@ -62,11 +62,28 @@
 	<!-- Home Page Ends -->
 
 	<!-- Account Page Header -->
-	<header class="header mdl-layout__header mdl-color-text--white mdl-color--red-900">
-		<div class="mdl-layout__header-row titlebar">
-      		<h3 class="logo">Le Organisation Name</h3>
-    	</div>
-    	<div class="tab mdl-layout__header-row mdl-color--red-A100">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">	
+	<header class="header mdl-layout__header mdl-color-text--white ">
+		<div class="mdl-layout__header-row">
+              <!-- Title -->
+                <span class="mdl-layout-title">WorkTeen.</span>
+                <div class="mdl-layout-spacer"></div>
+                <a href="#"><i class="material-icons nav-icon">notifications</i></a>
+                <a href="#"><i class="material-icons nav-icon">help</i></a>
+                <a href="#"><i class="material-icons nav-icon">build</i></a>
+				<form action="#">
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+                          <i class="material-icons nav-spl search-icon">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                          <input class="mdl-textfield__input" type="text" id="sample6">
+                          <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+                        </div>
+                      </div>
+                    </form>
+            </div>
+    	<div class="tab mdl-layout__header-row ">
     		<div class="mdl-tab">
 
     			<div id = "public-feed" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
@@ -140,13 +157,13 @@
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBoR1DGa6WLt7ZNG5TnygsiLSVvGiPYPO0",
-    authDomain: "database-d0755.firebaseapp.com",
-    databaseURL: "https://database-d0755.firebaseio.com",
-    storageBucket: "database-d0755.appspot.com",
+    apiKey: "AIzaSyDifK757qQOwlFe0GEH0854oVA_oextAdo",
+    authDomain: "workteenv2.firebaseapp.com",
+    databaseURL: "https://workteenv2.firebaseio.com",
+    storageBucket: "workteenv2.appspot.com",
   };
   firebase.initializeApp(config);
 </script>
-<script src="../scripts/main.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

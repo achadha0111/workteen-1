@@ -1,56 +1,14 @@
 [debug] ----------------------------------------------------------------------
-[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\Kunal\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
 [debug] CLI Version:  3.0.2
-[debug] Platform:     darwin
-[debug] Node Version: v4.4.2
-[debug] Time:         Fri Jul 15 2016 14:43:42 GMT+0530 (IST)
+[debug] Platform:     win32
+[debug] Node Version: v4.4.5
+[debug] Time:         Mon Aug 01 2016 16:40:55 GMT+0530 (India Standard Time)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [info] Starting Firebase development server...
 [info] 
-[info] Project Directory: /Users/aayushchadha/Desktop/projects/wt_data_add
-[info] Public Directory: app
-[info] 
-[info] Server listening at: http://localhost:5000
-[debug] ----------------------------------------------------------------------
-[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] CLI Version:  3.0.2
-[debug] Platform:     darwin
-[debug] Node Version: v4.4.2
-[debug] Time:         Tue Jul 26 2016 11:04:45 GMT+0530 (IST)
-[debug] ----------------------------------------------------------------------
-[debug] 
-[info] Starting Firebase development server...
-[info] 
-[info] Project Directory: /Users/aayushchadha/Desktop/projects/wt_data_add
-[info] Public Directory: app
-[info] 
-[info] Server listening at: http://localhost:5000
-[debug] ----------------------------------------------------------------------
-[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] CLI Version:  3.0.4
-[debug] Platform:     darwin
-[debug] Node Version: v4.4.2
-[debug] Time:         Tue Jul 26 2016 11:40:37 GMT+0530 (IST)
-[debug] ----------------------------------------------------------------------
-[debug] 
-[info] Starting Firebase development server...
-[info] 
-[info] Project Directory: /Users/aayushchadha/Desktop/workteen_github
-[info] Public Directory: app
-[info] 
-[info] Server listening at: http://localhost:5000
-[debug] ----------------------------------------------------------------------
-[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] CLI Version:  3.0.4
-[debug] Platform:     darwin
-[debug] Node Version: v4.4.2
-[debug] Time:         Thu Jul 28 2016 16:02:41 GMT+0530 (IST)
-[debug] ----------------------------------------------------------------------
-[debug] 
-[info] Starting Firebase development server...
-[info] 
-[info] Project Directory: /Users/aayushchadha/Desktop/workteen_github
+[info] Project Directory: c:\Users\Kunal\Desktop\newlogin\workteen
 [info] Public Directory: app
 [info] 
 [info] Server listening at: http://localhost:5000
